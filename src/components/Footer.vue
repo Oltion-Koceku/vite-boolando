@@ -33,36 +33,40 @@
 
 
 <style lang="scss" scoped>
-  footer .container{
-  justify-content: space-between;
-  color: white;
-}
 footer{
   align-items: center;
   background-color: #1a1a1a;
   height: 100px;
+  .container{
+    justify-content: space-between;
+    color: white;
+    li{
+      padding: 0;
+      line-height: 40px;
+      padding-right: 10px;
+      a{
+        text-decoration: none;
+        color: white;
+        margin-right: 10px;
+      }
+    }
+    .social{
+      a{
+        color: white;
+      }
+    
+      i{
+      padding-right: 5px;
+      font-size: large;
+      line-height: 40px;
+      }
+    }
+  }
 }
 
 
-footer .container ul li{
-  padding: 0;
-  line-height: 40px;
-  padding-right: 10px;
-}
-
-footer .social a{
-  color: white;
-}
-footer .container ul li a{
-  text-decoration: none;
-  color: white;
-  margin-right: 10px;
-}
 
 
-footer .social i{
-padding-right: 5px;
-font-size: large;
-line-height: 40px;
-}
+
+
 </style>
