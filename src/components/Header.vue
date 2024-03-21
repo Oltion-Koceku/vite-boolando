@@ -4,13 +4,13 @@
 </script>
 
 <template>
+  
   <header>
-    <header>
     <div class="topbar">
-      <div class="box">
+      <div class="container d-flex box">
         <!-- nav -->
-        <nav class="menu">
-          <ul>
+        <nav class="menu d-flex">
+          <ul class="d-flex">
             <li>
               <a href="#">Donna</a>
             </li>
@@ -32,7 +32,7 @@
 
         <!-- icon -->
         <nav class="menu social">
-          <ul>
+          <ul class="d-flex">
             <li>
               <a href="#"><i class="fa-regular fa-user"></i></a>
             </li>
@@ -49,10 +49,55 @@
       </div>
     </div>
   </header>
-  </header>
+  
 </template>
 
 
 <style lang="scss" scoped>
+@use "../assets/scss/partials/variables";
+header{
+  margin: 0 auto;
+  .topbar{
+    background-color: #FF6900;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    .box{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      margin: 0 17%;
+
+      .menu ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+
+        a{
+          color: white;
+          text-decoration: none;
+          margin-right: 10px;
+
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .logo{
+        width: 300px;
+        img{
+          max-width: 30%;
+        }
+      }
+    }
+  
+  }
+}
 
 </style>
