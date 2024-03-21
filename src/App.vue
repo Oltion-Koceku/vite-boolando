@@ -7,10 +7,14 @@
   export default {
     data(){
       return{
-        Header,
-        Main,
-        Footer
+
       }
+    },
+    components:{
+      
+      Header,
+      Main,
+      Footer
     }    
   }
 </script>
@@ -24,5 +28,5 @@
 
 
 <style lang="scss">
-
+  @use "./assets/scss/main.scss"
 </style>
