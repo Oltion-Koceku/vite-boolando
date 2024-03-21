@@ -6,9 +6,9 @@
 </script>
 
 <template>
-  <div>
-
-  </div>
+  <footer>
+    <h1>ciao</h1>
+  </footer>
 </template>
 
 

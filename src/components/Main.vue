@@ -6,9 +6,9 @@
 </script>
 
 <template>
-  <div>
-
-  </div>
+  <main>
+    <h1>sadasds</h1>
+  </main>
 </template>
 
 

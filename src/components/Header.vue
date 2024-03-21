@@ -5,7 +5,7 @@
 
 <template>
   <header>
-    <h1>gino</h1>
+    <h1>ciao</h1>
   </header>
 </template>
 
