@@ -11,7 +11,7 @@
       <div>
         <h4>Boolando s.r.l</h4>
         <nav>
-          <ul class="d-flex">
+          <ul class="d-flex column">
             <li><a href="#">Infomazioni legali</a></li>
             <li><a href="#">Normativa sulla privacy</a></li>
             <li><a href="#">Diritto di recesso</a></li>
@@ -56,6 +56,7 @@ footer .social a{
 footer .container ul li a{
   text-decoration: none;
   color: white;
+  margin-right: 10px;
 }
 
 
