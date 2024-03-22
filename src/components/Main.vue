@@ -30,8 +30,11 @@ import {json} from "../data/db.js"
     <mainProduct 
       v-for="(item, index) in jsonlist.products"
       :key="index"
-      urlImg = "item.frontImage"
-      brand = "item.brand"
+      :urlImg = "item.frontImage"
+      :brand = "item.brand"
+      :urlImg2 = "item.backImage"
+      :nameProduct = "item.name"
+      :priceProduct = "item.price"
     />
   </main>
 </template>

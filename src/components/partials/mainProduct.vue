@@ -1,17 +1,17 @@
 <script>
   export default {
-    props(){
-      return{
+    props:{
+      
         urlImg: String,
         urlImg2: String,
-        brand: Number,
+        brand: String,
         nameProduct: String,
-        priceProduct: String
-      }
+        priceProduct: Number
+      
     },
 
     mounted(){
-      console.log(this.brand);
+      
     }
 
     
@@ -21,7 +21,7 @@
 <template>
   <div class="container d-flex ">
     <div class="product">
-      <img class="foto1" src="../../assets/img/{{ urlImg }}" alt="">
+      <img class="foto1" :src="'../../assets/img/'+urlImg" alt="">
       <img src="../assets/img/{{urlImg2}}" alt="1b">
         <span class="cuore d-flex ">&hearts;</span>
         <span class="discount d-flex">-50%</span>
