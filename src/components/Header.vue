@@ -1,5 +1,21 @@
 <script>
   export default {
+  data(){
+    return{
+      menu: [
+        {
+          title: "Uomo"
+        },      
+        {
+          title: "Donna"
+        },      
+        {
+          title: "Bambini"
+        }      
+      ],
+
+    }
+  }
   }
 </script>
 
@@ -11,14 +27,8 @@
         <!-- nav -->
         <nav class="menu d-flex">
           <ul class="d-flex">
-            <li>
-              <a href="#">Donna</a>
-            </li>
-            <li>
-              <a href="#">Uomo</a>
-            </li>
-            <li>
-              <a href="#">Bambini</a>
+            <li v-for="(item, index) in menu" :key="index">
+              <a href="#">{{item.title}}</a>
             </li>
           </ul>
         </nav>
