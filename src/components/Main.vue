@@ -1,12 +1,13 @@
 
 <script>
-import mainProduct from './partials/mainProduct.vue';
-import db from "../db.json";
-import { computed } from 'vue';
+import mainProduct from "./partials/mainProduct.vue";
+import {json} from "../data/db.js"
+
+
   export default {
     data(){
       return{
-        db
+        jsonlist : json
         
       }
 
@@ -14,6 +15,10 @@ import { computed } from 'vue';
     components:{
       mainProduct
     },
+
+    mounted(){
+      console.log();
+    }
 
 
 
@@ -23,9 +28,10 @@ import { computed } from 'vue';
 <template>
   <main>
     <mainProduct 
-      v-for="(item, index) in db.products"
+      v-for="(item, index) in jsonlist.products"
       :key="index"
-      :urlImg = "item.frontImage"
+      urlImg = "item.frontImage"
+      brand = "item.brand"
     />
   </main>
 </template>

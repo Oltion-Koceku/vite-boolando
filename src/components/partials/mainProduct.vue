@@ -4,11 +4,17 @@
       return{
         urlImg: String,
         urlImg2: String,
-        brand: String,
+        brand: Number,
         nameProduct: String,
         priceProduct: String
       }
+    },
+
+    mounted(){
+      console.log(this.brand);
     }
+
+    
   }
 </script>
 

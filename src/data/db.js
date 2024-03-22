@@ -1,4 +1,4 @@
-{
+const json = {
   "products": [
     {
       "id": 1,
@@ -104,4 +104,6 @@
     }
   ]
 }
+
+export { json }
 

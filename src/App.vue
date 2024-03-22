@@ -3,12 +3,13 @@
   import Footer from './components/Footer.vue';
   import Header from './components/Header.vue';
   import Main from './components/Main.vue';
-  import db from "./db.json";
+  import {json} from './data/db.js'
+  
   
   export default {
     data(){
       return{
-        db
+        json
         
       }
     },
@@ -22,6 +23,7 @@
 </script>
 
 <template>
+
   <Header />
   <Main />
   <Footer />
