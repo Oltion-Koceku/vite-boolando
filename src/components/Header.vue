@@ -64,7 +64,7 @@
 
 
 <style lang="scss" scoped>
-@use "../assets/scss/partials/variables";
+
 header{
   margin: 0 auto;
   .topbar{

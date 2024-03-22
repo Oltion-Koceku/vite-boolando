@@ -1,90 +1,39 @@
 
 <script>
+import mainProduct from './partials/mainProduct.vue';
+import db from "../db.json";
+import { computed } from 'vue';
   export default {
-    
+    data(){
+      return{
+        db
+        
+      }
+
+    },
+    components:{
+      mainProduct
+    },
+
+
+
   }
 </script>
 
 <template>
   <main>
-    <div class="container d-flex ">
-      
-      <!-- Top items -->
-      <div class="product">
-        <img class="foto1" src="../assets/img/1.webp" alt="">
-        <img src="../assets/img/1b.webp" alt="1b">
-          <span class="cuore d-flex ">&hearts;</span>
-          <span class="discount d-flex">-50%</span>
-          <span class="eco d-flex">Sostenibilitá</span>
-          <p>Levi's</p>
-          <h3>RELAXED FIT TEE UNISEX</h3>
-          <span class="prezzo">14,99 &euro;</span>
-          <span class="overline line-through">29,99 &euro;</span>
-      </div>
-
-      <div class="product">
-          <img class="foto1" src="../assets/img/2.webp" alt="">
-          <img src="../assets/img/2b.webp" alt="2b">
-          <span class="cuore d-flex ">&hearts;</span>
-          <span class="discount  d-flex">-30%</span>
-          <p>Guess</p>
-          <h3>ROSES TEE</h3>
-          <span class="prezzo">20,99 &euro;</span>
-          <span class="overline line-through">29,99 &euro;</span>
-        </div>  
-        
-        <div class="product">
-          <img class="foto1" src="../assets/img/3.webp" alt="">
-          <img src="../assets/img/3b.webp" alt="3b">
-          <span class="cuore d-flex ">&hearts;</span>
-          <span class="discount d-flex">-30%</span>
-          <p>Come zucchero filato</p>
-          <h3>VOGLIA DI COLORI PASTELLO</h3>
-          <span class="prezzo">129,99 &euro;</span>
-          <spa class="overline line-through">184,99 &euro;</spa>
-        </div>
-          <!-- /Top items -->
-
-          <!-- Bottom items -->
-          <div class="product">
-            <img class="foto1" src="../assets/img/4.webp" alt="">
-            <img src="../assets/img/4b.webp" alt="4b">
-            <span class="cuore d-flex ">&hearts;</span>
-            <span class="discount d-flex">-50%</span>
-            <span class="eco d-flex">Sostenibilitá</span>
-            <p>Levi's</p>
-            <h3>TEE UNISEX</h3>
-            <span class="prezzo">14,99 &euro;</span>
-            <span class="overline line-through">29,99 &euro;</span>
-          </div>
-          
-          <div class="product ">
-            <img class="foto1" src="../assets/img/5.webp" alt="">
-            <img src="../assets/img/5b.webp" alt="5b">
-            <span class="cuore d-flex ">&hearts;</span>
-            <span class="discount d-flex">-50%</span>
-            <span class="eco d-flex">Sostenibilitá</span>
-            <p>Maya Deluxe</p>
-            <h3>STRIPE BODICE</h3>
-            <span class="prezzo">99,99 &euro;</span>
-          </div>
-          
-          <div class="product">
-            <img class="foto1" src="../assets/img/6.webp" alt="">
-            <img src="../assets/img/6b.webp" alt="6b">
-            <span class="cuore d-flex ">&hearts;</span>
-            <span class="eco-last d-flex">Sostenibilitá</span>
-            <p>Esprit</p>
-            <h3>MAGLIONE - BLACK</h3>
-            <span class="prezzo">29,99 &euro;</span>
-          </div>
-
-    </div>
-</main>
+    <mainProduct 
+      v-for="(item, index) in db.products"
+      :key="index"
+      :urlImg = "item.frontImage"
+    />
+  </main>
 </template>
 
 
 <style lang="scss" scoped>
+
+@use "../assets/scss/partials/variables" as *;
 
 .container .product{
   margin: 40px auto;
@@ -108,7 +57,7 @@
   right: 0;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: $color-white;
   height: 50px;
   width: 50px;
   margin-top: 10px;
@@ -116,7 +65,7 @@
 }
 
 .product .cuore:hover{
-  color: red;
+  color: $color-prezzo;
 }
 
 .product .discount{
@@ -126,12 +75,12 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: white;
+  background-color: $color-white;
   width: 55px;
   height: 25px;
   margin-bottom: 100px;
-  background-color: red;
-  color: white;
+  background-color: $color-prezzo;
+  color: $color-white;
 }
 
 .product .eco{
@@ -141,13 +90,13 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: white;
+  background-color: $color-white;
   width: 100px;
   height: 25px;
   margin-bottom: 100px;
   margin-left: 60px;
   background-color: green;
-  color: white;
+  color: $color-white;
 }
 
 
@@ -158,16 +107,16 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: white;
+  background-color: $color-white;
   width: 100px;
   height: 25px;
   margin-bottom: 100px;
   background-color: green;
-  color: white;
+  color: $color-white;
 }
 
 .prezzo{
-  color: red;
+  color: $color-prezzo;
   font-weight: 800;
 }
 

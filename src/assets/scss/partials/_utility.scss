@@ -1,4 +1,4 @@
-@use "./variables";
+@use "./variables" as *;
 
 *{
   margin: 0;
@@ -25,6 +25,6 @@
 }
 
 .prezzo{
-  color: color-prezzo;
+  color: $color-prezzo;
   font-weight: 800;
 }

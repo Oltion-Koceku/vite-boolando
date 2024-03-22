@@ -33,26 +33,28 @@
 
 
 <style lang="scss" scoped>
+
+@use "../assets/scss/partials/variables" as *;
 footer{
   align-items: center;
   background-color: #1a1a1a;
   height: 100px;
   .container{
     justify-content: space-between;
-    color: white;
+    color: $color-white;
     li{
       padding: 0;
       line-height: 40px;
       padding-right: 10px;
       a{
         text-decoration: none;
-        color: white;
+        color: $color-white;
         margin-right: 10px;
       }
     }
     .social{
       a{
-        color: white;
+        color: $color-white;
       }
     
       i{
